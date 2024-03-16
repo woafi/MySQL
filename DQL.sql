@@ -13,11 +13,11 @@ INSERT INTO Student
 VALUES 
 (101, "AMAN", 78,"C","Pune"), 
 (102, "RAHIM", 96, "A", "Mumbai"),
-(103, "WOAFI", 85, "B", "Mumbai"),
-(104, "ROBI", 83, "A", "Delhi"),
+(103, "WOAFI", 84, "B", "Mumbai"),
+(104, "ROBI", 86, "A", "Delhi"),
 (105, "FARAH", 12, "F", "Delhi"),
 (106, "LUMINE", 82, "B", "Delhi");
-
+ 
 #SELECT
 SELECT * FROM Student;
 SELECT DISTINCT City FROM Student;
@@ -42,6 +42,20 @@ SELECT AVG(Marks) FROM Student;
 SELECT COUNT(Name) FROM Student;
 
 #WHERE CLAUSE
-SELECT City, COUNT(Rollno) FROM Student GROUP BY City;
+SELECT City, COUNT(grade) FROM Student GROUP BY City;
+
+#HAVE CLAUSE
+SELECT count(rollno), City FROM student GROUP BY city HAVING max(marks) > 80;
+
+#General
+SELECT city
+FROM Student
+WHERE grade ="A"
+GROUP BY city
+HAVING max(marks) > 80
+ORDER BY City DESC;
+
+
 
 DROP TABLE Student;
+DROP DATABASE college;
