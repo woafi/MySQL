@@ -29,20 +29,11 @@ INSERT INTO Teacher Values
 (103, "Fritz", 103),
 (104, "karl", 101);
 
-ALTER TABLE Teacher
-ADD dept_name VARCHAR(50);
-
-ALTER TABLE Teacher
-DROP COLUMN dept_name;
-
-INSERT INTO Teacher (dept_name)
-SELECT name FROM Department;
-
-
 SELECT * FROM Teacher;
 
 UPDATE Department SET id = 104 WHERE id = 103;
 
+SHOW TABLES;
 
 
 
