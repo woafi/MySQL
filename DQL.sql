@@ -55,7 +55,5 @@ GROUP BY city
 HAVING max(marks) > 80
 ORDER BY City DESC;
 
-
-
 DROP TABLE Student;
 DROP DATABASE college;
