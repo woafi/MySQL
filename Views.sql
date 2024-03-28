@@ -21,15 +21,10 @@ VALUES
 
 SELECT * FROM Student;
 
-SELECT name, marks
-FROM student
-WHERE marks > (SELECT AVG(marks) FROM student);
+DROP DATABASE College;
 
-SELECT marks FROM student WHERE city = "Delhi";
+#VIEWS
+CREATE VIEW view1 AS
+SELECT rollno, name, marks FROM student;
 
-SELECT MAX(Marks) 
-FROM Student
-WHERE marks IN (SELECT marks FROM student WHERE city = "Delhi");
-
-SELECT MAX(Marks)
-FROM(SELECT * FROM student WHERE city = "Delhi") AS temp;
+SELECT * FROM view1;
