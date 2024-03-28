@@ -28,3 +28,4 @@ CREATE VIEW view1 AS
 SELECT rollno, name, marks FROM student;
 
 SELECT * FROM view1;
+DROP VIEW view1;

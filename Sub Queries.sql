@@ -21,6 +21,8 @@ VALUES
 
 SELECT * FROM Student;
 
+DROP DATABASE College;
+
 SELECT name, marks
 FROM student
 WHERE marks > (SELECT AVG(marks) FROM student);

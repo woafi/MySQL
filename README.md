@@ -1,0 +1,1 @@
+This repository will be useful to get started and know MYSQL better
